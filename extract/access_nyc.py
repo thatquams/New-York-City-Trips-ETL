@@ -136,6 +136,7 @@ def access_nyc_data(function):
         
         finally:
             logger.info("Finished attempting to access NYC data page.")
+            driver.close()
             driver.quit() # close the browser
             
     return access_nyc_wrapper
